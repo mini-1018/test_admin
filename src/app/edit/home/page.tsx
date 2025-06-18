@@ -268,7 +268,7 @@ const CodaEditor: React.FC = () => {
         {/* 메인 비주얼 */}
         <section className="w-full">
           <div className="relative">
-            <img src={d.mainVisual.image} className="w-full h-auto" alt={d.mainVisual.alt} />
+            <img src={d.mainVisual.image} className="w-[50%] h-auto" alt={d.mainVisual.alt} />
           </div>
         </section>
         {/* 섹션 2 */}
