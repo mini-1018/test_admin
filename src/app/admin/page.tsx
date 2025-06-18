@@ -68,8 +68,8 @@ const AdminPage: React.FC = () => {
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 z-10">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">코다 관리자 페이지</h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">코다 커뮤니티 관련 편집</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">CODA 관리자</h1>
+            <p className="text-xl text-blue-100 max-w-2xl mx-auto">코다 커뮤니티 편집</p>
           </div>
         </div>
 

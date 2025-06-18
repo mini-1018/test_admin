@@ -1,4 +1,11 @@
 import "./globals.css";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  icons: {
+    icon: "/images/favicon.webp",
+  },
+};
 
 export default function RootLayout({
   children,
