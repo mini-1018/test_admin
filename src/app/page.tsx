@@ -55,7 +55,7 @@ export default function Home() {
             <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Image src="/images/favicon.webp" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px]" />
             </div>
-            <CardTitle className="text-2xl font-bold text-slate-900 mb-2">CODA 관리자</CardTitle>
+            <CardTitle className="text-2xl text-slate-900 mb-2">CODA Admin Center</CardTitle>
           </CardHeader>
 
           <CardContent className="space-y-6">
