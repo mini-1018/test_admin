@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Download, HelpCircle, Newspaper, Bell, ArrowRight, Headphones } from "lucide-react";
+import { Download, HelpCircle, Newspaper, Bell, ArrowRight, Headphones, Settings } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -51,6 +51,15 @@ const AdminPage: React.FC = () => {
       href: "/admin/downloads",
       bgColor: "bg-gray-100",
       iconColor: "text-gray-600",
+    },
+    {
+      id: "settings",
+      title: "설정",
+      description: "카테고리 등",
+      icon: Settings,
+      href: "/admin/settings",
+      bgColor: "bg-red-100",
+      iconColor: "text-red-600",
     },
   ];
 

@@ -6,6 +6,7 @@ import { Categories } from "@/types/categories";
 const categoriesPath = path.join(process.cwd(), "src/utils/categories.json");
 
 export async function GET() {
+  console.log("Fetching categories from:", categoriesPath);
   try {
     const fileContents = fs.readFileSync(categoriesPath, "utf8");
     const categories: Categories = JSON.parse(fileContents);
