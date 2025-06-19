@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
 export type CustomDialogVariant = "default" | "destructive" | "warning" | "success";
-export type CustomDialogSize = "sm" | "md" | "lg" | "xl";
+export type CustomDialogSize = "default" | "sm" | "md" | "lg" | "xl";
 
 interface CustomDialogProps {
   // 기본 제어
@@ -60,24 +60,27 @@ const variantConfig = {
 };
 
 const sizeClasses = {
+  default: "!max-w-[96%] !overflow-y-scroll !max-h-[90%]",
   sm: "max-w-sm",
   md: "max-w-md",
   lg: "max-w-lg",
   xl: "max-w-xl",
 };
 
-export const CustomDialog: React.FC<CustomDialogProps> = ({ open, onOpenChange, trigger, title, children, variant = "default", size = "md", showIcon = false, showActions = false, confirmText = "확인", cancelText = "취소", onConfirm, onCancel, confirmDisabled = false, hideCancel = false }) => {
+export const CustomDialog: React.FC<CustomDialogProps> = ({ open, onOpenChange, trigger, title, children, variant = "default", size = "lg", showIcon = false, showActions = false, confirmText = "확인", cancelText = "취소", onConfirm, onCancel, confirmDisabled = false, hideCancel = false }) => {
   const config = variantConfig[variant];
   const IconComponent = config.icon;
 
-  const handleCancel = () => {
+  const handleCancel = (e: any) => {
     onCancel?.();
     onOpenChange?.(false);
+    e.stopPropagation();
   };
 
-  const handleConfirm = () => {
+  const handleConfirm = (e: any) => {
     onConfirm?.();
     onOpenChange?.(false);
+    e.stopPropagation();
   };
 
   const dialogContent = (
