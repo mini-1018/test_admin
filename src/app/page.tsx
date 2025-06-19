@@ -51,7 +51,7 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 flex items-center justify-center p-6">
       <div className="relative w-full max-w-md">
         <Card className="bg-white/90 backdrop-blur-sm border-gray-200/60 shadow-2xl">
-          <CardHeader className="text-center pb-8">
+          <CardHeader className="text-center">
             <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Image src="/images/favicon.webp" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px]" />
             </div>
