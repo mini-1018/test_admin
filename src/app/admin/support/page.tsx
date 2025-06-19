@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Search, FileText, MessageCircle, Calendar, CheckCircle, Clock, Mail, Phone } from "lucide-react";
+import { Search, FileText, MessageCircle, Calendar, CheckCircle, Clock, Mail, Phone, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -101,8 +101,8 @@ export default function SupportPage() {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 flex items-center justify-center relative">
-              <div className="w-full h-full bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center">
-                <MessageCircle className="w-6 h-6 text-white" />
+              <div className="w-full h-full bg-blue-100 rounded-full flex items-center justify-center">
+                <Headphones className="w-6 h-6 text-blue-600" />
               </div>
             </div>
             <div>
@@ -162,8 +162,8 @@ export default function SupportPage() {
                   <p className="text-sm font-medium text-gray-600">답변률</p>
                   <p className="text-2xl font-bold text-green-600">{SupportPosts.length > 0 ? Math.round((answeredPosts.length / SupportPosts.length) * 100) : 0}%</p>
                 </div>
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                  <FileText className="w-6 h-6 text-white" />
                 </div>
               </div>
             </CardContent>

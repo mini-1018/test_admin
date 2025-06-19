@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Search, Plus, FileText, Trash2, Edit, Bell, Tag, Calendar, User } from "lucide-react";
+import { Search, Plus, FileText, Trash2, Edit, Bell, Tag, Calendar, User, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -138,8 +138,8 @@ const NoticePage: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 flex items-center justify-center relative">
-              <div className="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                <Bell className="w-6 h-6 text-white" />
+              <div className="w-full h-full bg-teal-100 rounded-full flex items-center justify-center">
+                <Bell className="w-6 h-6 text-teal-600" />
               </div>
             </div>
             <div>
@@ -157,8 +157,8 @@ const NoticePage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">전체 공지</p>
                   <p className="text-2xl font-bold text-slate-900">{noticePosts.length}</p>
                 </div>
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Bell className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
+                  <Bell className="w-6 h-6 text-teal-600" />
                 </div>
               </div>
             </CardContent>
@@ -171,8 +171,8 @@ const NoticePage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">카테고리</p>
                   <p className="text-2xl font-bold text-slate-900">{categories.length}</p>
                 </div>
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <Tag className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+                  <Tag className="w-6 h-6 text-gray-600" />
                 </div>
               </div>
             </CardContent>
@@ -185,8 +185,8 @@ const NoticePage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">총 조회수</p>
                   <p className="text-2xl font-bold text-slate-900">{noticePosts.reduce((sum, item) => sum + item.views, 0).toLocaleString()}</p>
                 </div>
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-orange-600" />
+                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-indigo-600" />
                 </div>
               </div>
             </CardContent>
@@ -199,8 +199,8 @@ const NoticePage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">이번 달</p>
                   <p className="text-2xl font-bold text-green-600">+18%</p>
                 </div>
-                <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-white" />
                 </div>
               </div>
             </CardContent>

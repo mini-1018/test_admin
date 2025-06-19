@@ -40,8 +40,8 @@ const AdminPage: React.FC = () => {
       description: "중요 공지사항 작성 및 관리",
       icon: Bell,
       href: "/admin/notice",
-      bgColor: "bg-orange-100",
-      iconColor: "text-orange-600",
+      bgColor: "bg-teal-100",
+      iconColor: "text-teal-600",
     },
     {
       id: "downloads",

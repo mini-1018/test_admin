@@ -146,8 +146,8 @@ const DownloadsPage: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 flex items-center justify-center relative">
-              <div className="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
-                <Download className="w-6 h-6 text-white" />
+              <div className="w-full h-full bg-gray-100 rounded-full flex items-center justify-center">
+                <Download className="w-6 h-6 text-gray-600" />
               </div>
             </div>
             <div>
@@ -179,8 +179,8 @@ const DownloadsPage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">총 다운로드</p>
                   <p className="text-2xl font-bold text-slate-900">{downloads.reduce((sum, item) => sum + item.downloadCount, 0).toLocaleString()}</p>
                 </div>
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
+                  <Download className="w-6 h-6 text-gray-600" />
                 </div>
               </div>
             </CardContent>
@@ -193,8 +193,8 @@ const DownloadsPage: React.FC = () => {
                   <p className="text-sm font-medium text-gray-600">이번 달</p>
                   <p className="text-2xl font-bold text-green-600">+12%</p>
                 </div>
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-orange-600" />
+                <div className="w-12 h-12 bg-gray-900 rounded-xl flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-white" />
                 </div>
               </div>
             </CardContent>

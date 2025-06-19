@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Search, Plus, FileText, Trash2, Edit, Newspaper, Tag, Calendar, User } from "lucide-react";
+import { Search, Plus, FileText, Trash2, Edit, Newspaper, Tag, Calendar, User, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
@@ -99,8 +99,8 @@ export default function NewsPage() {
         <div className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <div className="w-12 h-12 flex items-center justify-center relative">
-              <div className="w-full h-full bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center">
-                <Newspaper className="w-6 h-6 text-white" />
+              <div className="w-full h-full bg-purple-100 rounded-full flex items-center justify-center">
+                <Newspaper className="w-6 h-6 text-purple-600" />
               </div>
             </div>
             <div>
@@ -132,8 +132,8 @@ export default function NewsPage() {
                   <p className="text-sm font-medium text-gray-600">총 조회수</p>
                   <p className="text-2xl font-bold text-slate-900">{newsPosts.reduce((sum, item) => sum + item.views, 0).toLocaleString()}</p>
                 </div>
-                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
-                  <FileText className="w-6 h-6 text-orange-600" />
+                <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center">
+                  <Eye className="w-6 h-6 text-indigo-600" />
                 </div>
               </div>
             </CardContent>
@@ -146,8 +146,8 @@ export default function NewsPage() {
                   <p className="text-sm font-medium text-gray-600">이번 달</p>
                   <p className="text-2xl font-bold text-green-600">+15%</p>
                 </div>
-                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <Calendar className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-gray-800 rounded-xl flex items-center justify-center">
+                  <Calendar className="w-6 h-6 text-white" />
                 </div>
               </div>
             </CardContent>
@@ -183,7 +183,7 @@ export default function NewsPage() {
               </div>
               <div className="flex gap-2">
                 <Link href="/admin/news/create">
-                  <Button className="bg-purple-600 hover:bg-purple-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700">
                     <Plus className="w-4 h-4 mr-2" />
                     소식 추가
                   </Button>
@@ -212,7 +212,7 @@ export default function NewsPage() {
                     {/* 왼쪽: 메인 정보 */}
                     <div className="flex-1 space-y-3">
                       <div className="flex items-start gap-3">
-                        <Badge variant="secondary" className="bg-purple-100 text-purple-700 shrink-0">
+                        <Badge variant="secondary" className="bg-blue-100 text-blue-700 shrink-0">
                           {post.category}
                         </Badge>
                         <h3 className="text-lg font-semibold text-slate-900 leading-tight">{post.title}</h3>
