@@ -106,7 +106,7 @@ export default function Home() {
             </form>
 
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
-              <p className="text-xs text-blue-600 text-center">계정문의 : coda@coda.com</p>
+              <p className="text-xs text-blue-600 text-center">계정문의 : support@coda.ai.kr</p>
             </div>
           </CardContent>
         </Card>
