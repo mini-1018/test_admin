@@ -90,7 +90,7 @@ const AdminPage: React.FC = () => {
       {/* 관리 메뉴 섹션 */}
       <div className="max-w-7xl mx-auto px-6 py-10">
         {/* 관리 메뉴 그리드 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {adminMenus.map((menu) => (
             <Link key={menu.id} href={menu.href}>
               <Card className="group bg-white/90 backdrop-blur-sm border-gray-200/60 hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 cursor-pointer overflow-hidden">
