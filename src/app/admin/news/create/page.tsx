@@ -38,7 +38,7 @@ export default function NewsCreatePage() {
   return (
     <div className="flex flex-col h-full w-full p-10">
       <div className="flex items-center gap-4 mb-8">
-        <Image src="/images/favicon.webp" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px] mb-4" />
+        <Image src="/images/favicon.jpg" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px] mb-4" />
         <h1 className="text-[40px] font-bold mb-4 text-blue-900">소식 작성</h1>
       </div>
       <div className="space-y-4">

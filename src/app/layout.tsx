@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/images/favicon.webp",
+    icon: "/images/favicon.jpg",
   },
 };
 

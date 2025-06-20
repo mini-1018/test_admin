@@ -48,14 +48,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/20 flex items-center justify-center">
       <div className="relative w-full max-w-md">
-        <Card className="bg-white/90 backdrop-blur-sm border-gray-200/60 shadow-2xl">
+        <Card className="bg-white/90 backdrop-blur-sm border-gray-200/60 shadow-2xl !py-12">
           <CardHeader className="text-center">
             <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <Image src="/images/favicon.webp" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px]" />
+              <Image src="/images/favicon.jpg" alt="CODA Logo" width={80} height={80} className="object-contain rounded-[50px]" />
             </div>
-            <CardTitle className="text-2xl text-slate-900 mb-2">CODA Admin Center</CardTitle>
+            <CardTitle className="text-2xl text-[#2b2b2b] mb-2">CODA ADMIN CENTER</CardTitle>
           </CardHeader>
 
           <CardContent className="space-y-6">
@@ -93,7 +93,7 @@ export default function Home() {
               )}
 
               {/* 로그인 버튼 */}
-              <Button type="submit" disabled={isLoading} className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 transition-all duration-200 cursor-pointer">
+              <Button type="submit" disabled={isLoading} className="w-full bg-[#5596d2] text-white font-medium py-3 transition-all duration-200 cursor-pointer">
                 {isLoading ? (
                   <div className="flex items-center justify-center">
                     <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
@@ -104,15 +104,11 @@ export default function Home() {
                 )}
               </Button>
             </form>
-
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
-              <p className="text-xs text-blue-600 text-center">계정문의 : support@coda.ai.kr</p>
-            </div>
           </CardContent>
         </Card>
 
         <div className="text-center mt-8">
-          <p className="text-sm text-gray-500">© 2025 CODA Admin Center</p>
+          <p className="text-sm text-gray-500">© 2025 CODA ADMIN CENTER</p>
         </div>
       </div>
     </div>
