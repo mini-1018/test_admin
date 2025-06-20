@@ -1,6 +1,7 @@
 import { Toaster } from "sonner";
 import "./globals.css";
 import { Metadata } from "next";
+import SidebarContainer from "@/components/sidebar/SidebarContainer";
 
 export const metadata: Metadata = {
   icons: {
@@ -16,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        {children}
+        <SidebarContainer>{children}</SidebarContainer>
         <Toaster position="top-center" />
       </body>
     </html>
