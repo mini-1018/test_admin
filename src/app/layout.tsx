@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import "./globals.css";
 import { Metadata } from "next";
 
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster position="top-center" />
+      </body>
     </html>
   );
 }
