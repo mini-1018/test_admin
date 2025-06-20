@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import CategoriesTap from "./CategoriesTap";
 
-type UserRole = "admin" | "user" | "moderator";
+type UserRole = "normal" | "super";
 
 interface TabConfig {
   id: string;
@@ -33,6 +33,8 @@ const tabsConfig: TabConfig[] = [
     icon: Users,
     description: "관리자 계정 및 권한 설정",
     component: () => <div className="text-center py-12 text-gray-500">사용자 관리 탭 (개발 예정) - </div>,
+    requiresPermission: true,
+    permission: "super",
   },
   {
     id: "notifications",
@@ -40,16 +42,18 @@ const tabsConfig: TabConfig[] = [
     icon: Bell,
     description: "시스템 알림 및 이메일 설정",
     component: () => <div className="text-center py-12 text-gray-500">알림 설정 탭 (개발 예정)</div>,
-  },
-  {
-    id: "security",
-    label: "보안 설정",
-    icon: Shield,
-    description: "비밀번호 정책 및 보안 옵션",
-    component: () => <div className="text-center py-12 text-gray-500">보안 설정 탭 (개발 예정)</div>,
     requiresPermission: true,
-    permission: "admin",
+    permission: "super",
   },
+  // {
+  //   id: "security",
+  //   label: "보안 설정",
+  //   icon: Shield,
+  //   description: "비밀번호 정책 및 보안 옵션",
+  //   component: () => <div className="text-center py-12 text-gray-500">보안 설정 탭 (개발 예정)</div>,
+  //   requiresPermission: true,
+  //   permission: "super",
+  // },
   {
     id: "database",
     label: "데이터베이스",
@@ -57,17 +61,17 @@ const tabsConfig: TabConfig[] = [
     description: "백업 및 데이터 관리 설정",
     component: () => <div className="text-center py-12 text-gray-500">데이터베이스 탭 (개발 예정)</div>,
     requiresPermission: true,
-    permission: "admin",
+    permission: "super",
   },
-  {
-    id: "appearance",
-    label: "테마 설정",
-    icon: Palette,
-    description: "사이트 테마 및 브랜딩 설정",
-    component: () => <div className="text-center py-12 text-gray-500">테마 설정 탭 (개발 예정)</div>,
-    requiresPermission: true,
-    permission: "admin",
-  },
+  // {
+  //   id: "appearance",
+  //   label: "테마 설정",
+  //   icon: Palette,
+  //   description: "사이트 테마 및 브랜딩 설정",
+  //   component: () => <div className="text-center py-12 text-gray-500">테마 설정 탭 (개발 예정)</div>,
+  //   requiresPermission: true,
+  //   permission: "super",
+  // },
   {
     id: "system",
     label: "시스템 설정",
@@ -75,7 +79,7 @@ const tabsConfig: TabConfig[] = [
     description: "일반적인 시스템 환경 설정",
     component: () => <div className="text-center py-12 text-gray-500">시스템 설정 탭 (개발 예정)</div>,
     requiresPermission: true,
-    permission: "admin",
+    permission: "super",
   },
 ];
 
@@ -84,11 +88,12 @@ export default function SettingPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // 임시 사용자 권한 (실제로는 context나 props로 받아올 것)
-  const userRole: UserRole = "user"; // 타입을 명시적으로 지정
+  const userRole: UserRole = "normal"; // 타입을 명시적으로 지정
 
   const hasPermission = (tab: TabConfig): boolean => {
     if (!tab.requiresPermission) return true;
-    if (userRole === "admin") return true;
+    if (userRole === "normal") return false;
+    if (userRole === "super") return true;
     return tab.permission === userRole;
   };
 
@@ -104,7 +109,7 @@ export default function SettingPage() {
 
   const Sidebar = () => (
     <div className="h-full flex flex-col">
-      <div className="p-6 flex-1">
+      <div className="p-6 flex flex-col">
         {/* 헤더 */}
         <div className="flex items-center justify-between mb-8">
           <div className="flex items-center gap-3">
